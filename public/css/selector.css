@@ -1,0 +1,285 @@
+/*:root глобадьні стилі (батьківський селектор)*/
+
+/* :root {
+  background: purple;
+} */
+
+html {
+  max-width: 720px;
+}
+/* background: blue; */
+/* }
+
+body {
+  background: #fff;
+} */
+
+/*Global selector */
+/* * {
+  color: red;
+}
+
+h1 {
+  color: green;
+} */
+
+/*селектор .box класу*/
+/* .box {
+  background: #cfcfcf;
+} */
+
+/*селектор #user ідентифікатора   */
+/* #user,
+.user {
+  color: blue;
+} */
+
+/*декілька селекторів ,   */
+
+/* h1,
+h2#user,
+button.button#button {
+  color: green;
+}
+h1.button {
+  background: red;
+  color: black;
+}
+
+/* дочірній селектор*/
+/* #box > p {
+  color: palevioletred;
+}
+
+footer > .user {
+  color: plum;
+}
+
+footer > h1 {
+  color: gray;
+} */
+
+/* селектор нащадка*/
+/* footer em.child,
+footer div.child {
+  color: rgb(61, 243, 15);
+} */
+
+/* сестринський селектор */
+/* .p-top {
+  background: darkgoldenrod;
+}
+
+h1 + p {
+  background: black;
+} */
+
+/* сусідський селектор */
+/* 
+h1 ~ p,
+h1 ~ * > p {
+  background: black;
+} */
+
+/* Селектор останньої дитини :last-child
+Селектор одиничної дитини :only-child
+Селектор першого типу :first-of-type 
+Селектор останнього типу :last-of-type
+Селектор одиничного типу :only-of-type
+Селектор порядкової дитини :nth-child(1,even, odd, n+1)
+Селектор зворотної порядкової дитини :nth-last-child() 
+Селектор порядкового типу :nth-of-type( )
+Селектор невідповідності :not(.big )
+Селектор пустого контенту :empty {}
+*/
+
+.item {
+  color: rgb(0, 242, 255);
+}
+
+.item:last-of-type {
+  color: rgb(255, 0, 68);
+}
+
+.item:only-of-type {
+  color: rgb(0, 255, 17);
+}
+
+.item:nth-last-of-type(3n) {
+  color: rgb(255, 0, 166);
+}
+
+p:not(.item) {
+  color: gold;
+}
+
+p:empty {
+  height: 10px;
+  background: red;
+}
+
+.card-dark {
+  background: wheat;
+}
+
+.input-dark {
+  background: rgb(199, 220, 43);
+}
+
+.input-dark[required] {
+  background: red;
+}
+
+.input-dark[type='number'] {
+  background: rgb(238, 255, 0);
+}
+
+.small-img[alt~='small'] {
+  height: 500px;
+}
+
+a[rel~='external'] {
+  color: green;
+}
+
+button[class|='btn'] {
+  background: yellow;
+}
+
+a[class*='btn'] {
+  background: rgb(235, 235, 176);
+}
+
+a[class$='big'] {
+  background: blue;
+}
+
+.btn::first-letter {
+  color: red;
+}
+
+.big-text::first-line {
+  color: red;
+}
+
+.input-dark::placeholder {
+  color: green;
+  background: blue;
+}
+
+.before-after::before,
+.before-after::after {
+  content: '$$$';
+  color: green;
+  background: yellowgreen;
+}
+
+/*Селектори 4 
+Селектор псевдоклас(":")
+Селектор цільового тегу :target
+Селектор невідвіданих посилань:link
+Селектор наведення:hover
+Селектор активного тегу:active
+Селектор фокусованого тегу:focus
+Селектор фокус всередині тегу:focus-within
+Селектор мови тегу:lang(value)
+Селектор увімкненого/вимкненого тегу :enabled  :disabled
+Селектор редагованого тегу :read-write
+Селектор нередагованого тегу :read-only
+Селектор відміченого тегу :checked
+Селектор валідного тегу :valid
+Селектор не валідного тегу :invalid
+Селектор необов’язкового тегу  :optional
+Селектор за межі діапазону тегу :out-of-range
+Селектор в межах діапазону тегу :in-range
+Селектор наявності плейсхолдера в тегу :placeholder-shown
+*/
+
+#test:target {
+  color: red;
+}
+
+.link:link {
+  color: red;
+}
+/* .card:hover {
+  background: green;
+} */
+
+.link:active {
+  color: blue;
+}
+.card:active {
+  background-color: purple;
+}
+
+input {
+  background-color: rgb(225, 217, 225);
+}
+input:focus {
+  background-color: red;
+}
+
+.card:focus-within {
+  background-color: green;
+}
+
+.card:lang(en) > span::after {
+  content: '(en)';
+}
+
+button {
+  background-color: rgb(115, 255, 0);
+}
+
+button:enabled {
+  background-color: green;
+}
+
+button:disabled {
+  background-color: aqua;
+}
+
+.inp:read-write {
+  background-color: blue;
+}
+
+.inp:read-only {
+  background-color: red;
+}
+
+input[type='checkbox']:checked ~ span {
+  background: red;
+}
+
+.valid:valid {
+  background-color: yellow;
+}
+
+.valid:invalid {
+  background-color: goldenrod;
+}
+
+.valid:optional {
+  background-color: brown;
+}
+
+.number:focus {
+  background-color: gray;
+}
+
+.number:out-of-range {
+  background-color: red;
+}
+
+.number:in-range {
+  background-color: green;
+}
+
+.number:invalid {
+  background-color: yellow;
+}
+
+input:placeholder-shown ~ span {
+  background-color: pink;
+}
