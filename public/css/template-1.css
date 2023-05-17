@@ -10,6 +10,8 @@
 
 .header {
   padding: 24px;
+
+  border-bottom: 1px solid #dee2e6;
 }
 
 .logo {
@@ -60,6 +62,8 @@
 
 .footer {
   padding: 24px 0;
+
+  border-top: 1px solid #dee2e6;
 }
 
 .footer_copyright {
@@ -93,6 +97,8 @@
   text-align: center;
   max-width: 585px;
   margin: 0 auto;
+
+  line-height: 150%;
 }
 
 .plans_card:not(:last-of-type) {
@@ -118,6 +124,8 @@
 .card_price_duration {
   font-size: 29px;
   color: #6c7570;
+
+  vertical-align: top;
 }
 
 .card_block {
@@ -145,3 +153,103 @@
   font-size: 19px;
   padding: 9px;
 }
+
+.card {
+  border: 2px solid blueviolet;
+
+  border-radius: 15px;
+}
+.card:hover {
+  outline: 2px solid blueviolet;
+  outline-offset: 5px;
+
+  box-shadow: 5px 5px 10px 1px rgba(55, 2, 66, 0.9);
+
+  cursor: pointer;
+}
+
+.btn {
+  border-radius: 15px;
+}
+
+.btn:hover {
+  box-shadow: 5px 5px 10px 1px rgba(25, 112, 233, 0.9);
+}
+
+h1 {
+  text-shadow: 0px 0px 10px rgba(233, 35, 13, 0.9);
+}
+
+/* .plans_card:nth-child(2) {
+  display: none;
+} */
+
+.plans_card:nth-child(2) {
+  visibility: hidden;
+}
+
+.hero_text {
+  background: gray;
+
+  width: 200px;
+
+  hyphens: manual;
+
+  overflow: auto;
+
+  resize: both;
+
+  word-spacing: 10px;
+}
+
+.overflow {
+  overflow-wrap: break-word;
+}
+
+.hero_title {
+  max-width: 650px;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  height: 65px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+ /* .hero_title {
+  /* block-size: 100px;
+  writing-mode: vertical-lr;
+
+  inline-size: 150px;
+  writing-mode: horizontal-tb; */
+
+  /* border-block: 1rem dashed red;
+  writing-mode: horizontal-tb;
+  direction: rtl; */
+  /* 
+  border-block-end: 1rem solid;
+  writing-mode: horizontal-tb; */
+
+  /* inset-inline: 5px 20px; */
+
+  /* 
+  padding-inline: 5% 10%;
+  writing-mode: horizontal-tb; */
+
+  /* 
+  margin-block: 5% 20%;
+  writing-mode: horizontal-tb; */
+
+  /* max-inline-size: 240px; */
+
+  /* text-decoration-skip-ink: auto; */
+
+  /* font-variation-settings: 'wght' 75; */
+
+  /* line-break: loose; */
+
+  /* text-size-adjust: 150%;
+
+  text-underline-offset: -0.5rem; */
+}  */
