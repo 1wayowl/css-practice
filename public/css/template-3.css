@@ -234,7 +234,7 @@
 
 .form_button {
   background-color: var(--color-white);
-  width: 10%;
+  width: 100%;
   max-width: 160px;
   color: var(--color-text);
 }
