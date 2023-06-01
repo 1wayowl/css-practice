@@ -1,3 +1,30 @@
+/*Робота з анімаціями*/
+
+@keyframes fly {
+  from {
+    top: 0;
+    left: 0;
+  }
+
+  25% {
+    bottom: 500px;
+    right: 500px;
+
+    background-color: red;
+  }
+
+  50% {
+    left: 0;
+
+    background-color: blue;
+  }
+
+  to: {
+    top: 0;
+    right: 0;
+  }
+}
+
 :root {
   --space-m: 12px;
   --space-xm: 16px;
@@ -16,8 +43,10 @@
 
   --border-radius: 12px;
 
-  --weight-title: 500;
-  --weight-text: 400;
+  --weight-title: 500px;
+  --weight-text: 400px;
+
+  --page-width: 960px;
 }
 
 /*=============================*/
@@ -31,13 +60,13 @@
 }
 
 .page_content {
-  max-width: 960px;
+  max-width: var(--page-width);
   margin: 0 auto;
 
   display: flex;
   flex-direction: column;
 
-  gap: 80pxs;
+  gap: 80px;
 }
 
 /*=============================*/
@@ -48,6 +77,18 @@
 
   display: flex;
   justify-content: space-between;
+
+  position: sticky;
+
+  max-width: var(--page-width);
+  width: 100%;
+
+  top: 0;
+  /* left: calc(50% - (var(--page-width) / 2)); */
+
+  background-color: var(--color-white);
+
+  z-index: 1;
 }
 
 .logo {
@@ -84,6 +125,9 @@
   text-decoration: none;
 
   line-height: 100%;
+
+  transition-property: color;
+  transition-duration: 1s;
 }
 
 .nav_link:hover {
@@ -193,6 +237,10 @@
   text-decoration: none;
   padding: var(--space-m) var(--space-xm);
   border-radius: var(--border-radius);
+  text-align: center;
+
+  transition-property: opacity, color, background-color;
+  transition-duration: 1s;
 }
 
 .card_button {
@@ -202,6 +250,8 @@
 
 .card_button:hover {
   opacity: 0.7;
+  background-color: yellowgreen;
+  color: red;
 }
 
 .form {
@@ -238,3 +288,156 @@
   max-width: 160px;
   color: var(--color-text);
 }
+
+/*Робота з абсолютним позиціюванням*/
+
+/* .hero_image {
+  /** position: relative;
+  right: 100px;
+  top: 100px; /
+
+  position: absolute;
+  right: 0;
+  top: 106%;
+}
+
+.hero {
+  position: relative;
+} */
+
+.hero_slider_icon {
+  background-color: var(--color-primary);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: var(--border-radius);
+  color: #fff;
+
+  position: absolute;
+
+  top: calc(50% - 15px);
+}
+
+.hero_slider_icon:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.hero_slider {
+  position: relative;
+}
+
+.hero_slider_left {
+  left: var(--space-l);
+}
+
+.hero_slider_right {
+  right: var(--space-l);
+}
+
+.modal {
+  position: sticky;
+  top: 200px;
+  left: 200px;
+
+  /* height: 100px; */
+  width: 600px;
+  background-color: black;
+  color: #fff;
+
+  padding: 24px;
+
+  border-radius: 24px;
+
+  line-height: 150%;
+
+  z-index: 2;
+
+  transition-property: top;
+  transition-duration: 3s;
+  transition-timing-function: cubic-bezier(
+    0.075,
+    0.82,
+    0.165,
+    1
+  );
+  transition-delay: 1s;
+}
+
+.modal {
+  /* top: 600px; */
+
+  animation-name: fly;
+  animation-duration: 3s;
+
+  transition-timing-function: cubic-bezier(
+    0.92,
+    0,
+    0.92,
+    0.68
+  );
+  transition-delay: 3s;
+
+  /* animation-iteration-count: infinite; */
+
+  animation-direction: alternate;
+
+  animation-fill-mode: backwards;
+}
+
+body:hover .modal {
+  animation-play-state: running;
+}
+
+.modal_image {
+  height: 300px;
+  width: 400px;
+  float: left;
+  margin-right: 12px;
+  margin-top: 12px;
+
+  object-fit: scale-down;
+
+  background-color: aqua;
+
+  object-position: top right;
+}
+
+.modal_text {
+  clear: both;
+}
+
+.hero {
+  /* user-select: none; */
+  user-select: all;
+}
+
+.input {
+  caret-color: var(--color-primary);
+  border: 1px solid var(--color-title);
+}
+
+/* :root {
+  scroll-behavior: smooth;
+} */
+
+/*словник сучасних та продвинутих CSS*/
+
+.hero {
+  background: repeating-conic-gradient(
+    red 0%,
+    yellow 15%,
+    red 33%
+  );
+}
+
+.hero_image {
+  aspect-ratio: 1/2;
+}
+
+/* .hero_image {
+  perspective: 5.5cm;
+} */
