@@ -263,6 +263,7 @@
 
 .expirience {
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--space-l);
@@ -278,11 +279,13 @@
   flex-direction: column;
   align-items: center;
   padding: var(--space-m) var(--space-l);
-  gap: var(--size-s);
+  /* gap: var(--size-s); */
 
   position: absolute;
   width: 90px;
-  left: 1000px;
+  height: 50px;
+  left: 930px;
+  top: 0px;
   right: var(--page-width);
   background: #ff7347;
   border-radius: 70px;
@@ -369,7 +372,7 @@
 
 .form_button {
   text-align: center;
-  padding: 12px;
+  padding: var(--space-m);
   background-color: var(--color-primary);
   color: var(--color-white);
   border-radius: calc(var(--border-radius-d) / 3);
