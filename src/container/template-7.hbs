@@ -32,16 +32,18 @@
 </div>
 
 <main class="articles">
-
     <div class="our_articles">
-        <h2 class="card_name">Our articles </h2>
-        <button class="form_button " href="#"> View all </button>
+        <h2 class="our_name">Our Articles </h2>
+        <button class="our_button " href="#"> View all </button>
     </div>
 
     <div class="card">
         {{#each articles}}
         <div class="articles_card">
             <img src="{{photo}}" alt="card image" class="card_image" id="{{id}}">
+            <div class="{{#if isNew}}isNew{{/if}} ">
+                <span>New</span>
+            </div>
             <h2 class="card_name">{{name}} </h2>
             <p class="card_description">{{description}} </p>
             <button class="form_button " href="#"> Read all </button>
@@ -49,23 +51,16 @@
         {{/each}}
     </div>
 
-    <div class="isNew">New</div>
-
 </main>
 
 
-<footer class="page_block">
-    <div class="footer">
-        <div>
-            {{> logo}}
-            <span class="footer_copyright">Copyright 2023-2024</span>
-        </div>
-
-        {{#each footer}}
-        <div>
-            <span class="footer_title">{{title}}</span>
-            {{> nav list=links isVertical=true}}
-        </div>
+<footer class="footer">
+    {{#with footer}}
+    <div class="footer_copyright">{{copyright}}</div>
+    <div class="footer_title">
+        {{#each pages}}
+        <a href="{{path}}" class="nav_link">{{name}}</a>
         {{/each}}
     </div>
+    {{/with}}
 </footer>

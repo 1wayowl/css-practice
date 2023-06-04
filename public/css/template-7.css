@@ -100,7 +100,7 @@
 }
 
 .nav_link {
-  color: var(--color-text);
+  color: var(--color-white);
   font-size: var(--size-d);
   text-decoration: none;
 
@@ -113,34 +113,6 @@
 .nav_link:hover {
   text-decoration: underline;
   color: var(--color-primary);
-}
-
-.footer {
-  padding: var(--space-l);
-
-  border-top: 1px solid var(--color-border);
-
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer_copyright {
-  font-size: var(--size-s);
-  color: var(--color-text);
-
-  display: block;
-
-  margin-top: var(--space-l);
-}
-
-.footer_title {
-  font-size: var(--size-l);
-  color: var(--color-title);
-
-  display: block;
-  margin-bottom: var(--space-l);
-
-  font-weight: var(--weight-title);
 }
 
 .hero {
@@ -251,12 +223,24 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
   gap: var(--space-l);
-  font-weight: var(--weight-title);
-  font-size: 32px;
-
   align-self: stretch;
+}
+
+.our_name {
+  font-size: 32px;
+  font-weight: var(--weight-title);
+  color: #fff;
+}
+
+.our_button {
+  width: 99px;
+  height: 40px;
+  font-size: var(--size-d);
+  font-weight: var(--weight-text);
+  color: #fff;
+  border: 1px solid #9ca3af;
+  border-radius: 10px;
 }
 
 .card {
@@ -297,10 +281,55 @@
 }
 
 .isNew {
+  color: orangered;
+  background: rgba(251, 95, 95, 0.5);
+  width: 47px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.isNew > span {
+  font-weight: var(--weight-title);
+  font-size: var(--size-d);
+  line-height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  color: #fff;
+}
+
+.footer {
   display: flex;
   flex-direction: row;
 
-  position: absolute;
-  color: orangered;
-  font-size: var(--size-b);
+  gap: var(--space-xm);
+  border: 1px solid #202a3b;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer_copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: var(--space-xm);
+
+  font-size: var(--size-s);
+  color: var(--color-text);
+
+  margin-top: var(--space-l);
+}
+
+.footer_title {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+
+  font-size: var(--size-l);
+  color: var(--color-title);
+  font-weight: var(--weight-title);
 }
