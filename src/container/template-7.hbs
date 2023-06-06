@@ -1,16 +1,25 @@
 <div class="header">
-    <div class="">
-        <div class="logo">
-            <span class="badge text-bg-primary">Logo</span>
-        </div>
+    <div class="logo">
+        <span class="badge text-bg-primary">Logo</span>
     </div>
 
     <nav class="header_nav ">
-        <div class="header_nav_right">
-            {{> nav list=header}}
-        </div>
+        {{#each header.links}}
+        <a class='nav_link link_animation' href='{{url}}'>
+            {{text}}</a>
+
+        {{/each}}
     </nav>
 </div>
+
+<div class="ad">
+    {{#with header.ad}}
+    <a class='nav_link link_ad' href='{{url}}'> {{text}}</a>
+    {{/with}}
+
+</div>
+
+
 
 {{#with hero}}
 <div class="hero">
@@ -54,13 +63,14 @@
 </main>
 
 
+
+{{#with footer}}
 <footer class="footer">
-    {{#with footer}}
     <div class="footer_copyright">{{copyright}}</div>
     <div class="footer_title">
         {{#each pages}}
         <a href="{{path}}" class="nav_link">{{name}}</a>
         {{/each}}
     </div>
-    {{/with}}
 </footer>
+{{/with}}

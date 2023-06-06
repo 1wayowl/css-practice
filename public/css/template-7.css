@@ -17,6 +17,8 @@
   --color-title: #5a5a5a;
   --color-text: #343a40;
   --color-text-2: #9ca3af;
+  --color-background2: #111827;
+  --color-animation: rgb(187, 225, 33);
 
   --border-radius-d: 12px;
   --border-radius-s: 4px;
@@ -31,7 +33,7 @@
 /*=============================*/
 
 .page {
-  background: #111827;
+  background: var(--color-background2);
   padding: 0 15px;
 
   display: flex;
@@ -54,8 +56,9 @@
 .header {
   padding: var(--space-l) 0;
   border-bottom: 1px solid var(--color-border);
-
+  color: var(--color-white);
   display: flex;
+
   justify-content: space-between;
 
   position: sticky;
@@ -65,9 +68,21 @@
 
   top: 0;
 
-  background-color: var(--color-white);
+  background-color: var(--color-background2);
 
   z-index: 1;
+}
+.header_nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-l);
+}
+
+.ad {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -105,6 +120,7 @@
   text-decoration: none;
 
   line-height: 100%;
+  margin-right: 40px;
 
   transition-property: color;
   transition-duration: 1s;
@@ -113,6 +129,18 @@
 .nav_link:hover {
   text-decoration: underline;
   color: var(--color-primary);
+}
+
+.link_ad {
+  color: var(--color-animation);
+  transition-property: var(--color-animation);
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(
+    0.075,
+    0.82,
+    0.165,
+    1
+  );
 }
 
 .hero {
@@ -257,6 +285,7 @@
   gap: 32px;
 
   align-self: stretch;
+  position: relative;
 }
 
 .card_image {
@@ -286,27 +315,29 @@
   width: 47px;
   height: 20px;
   border-radius: 4px;
+  position: absolute;
+  left: 303px;
+  bottom: 300px;
 }
 
 .isNew > span {
   font-weight: var(--weight-title);
   font-size: var(--size-d);
-  line-height: 100%;
-
-  display: flex;
   align-items: center;
-
+  line-height: 100%;
   color: #fff;
 }
 
 .footer {
   display: flex;
-  flex-direction: row;
+
+  flex-direction: row-reverse;
 
   gap: var(--space-xm);
   border: 1px solid #202a3b;
   justify-content: space-between;
   align-items: flex-start;
+  align-self: stretch;
 }
 
 .footer_copyright {
@@ -318,18 +349,16 @@
   gap: var(--space-xm);
 
   font-size: var(--size-s);
-  color: var(--color-text);
-
-  margin-top: var(--space-l);
+  color: var(--color-white);
 }
 
 .footer_title {
   display: flex;
-  flex-direction: row;
-
+  /* flex-direction: row; */
   align-items: center;
-
   font-size: var(--size-l);
   color: var(--color-title);
   font-weight: var(--weight-title);
+
+  width: 60%;
 }
