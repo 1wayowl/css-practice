@@ -48,15 +48,7 @@
 
     <div class="card">
         {{#each articles}}
-        <div class="articles_card">
-            <img src="{{photo}}" alt="card image" class="card_image" id="{{id}}">
-            <div class="{{#if isNew}}isNew{{/if}} ">
-                <span>New</span>
-            </div>
-            <h2 class="card_name">{{name}} </h2>
-            <p class="card_description">{{description}} </p>
-            <button class="form_button " href="#"> Read all </button>
-        </div>
+        {{> cardArticleDark data=this}}
         {{/each}}
     </div>
 
