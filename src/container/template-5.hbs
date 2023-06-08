@@ -28,7 +28,7 @@
     {{/with}}
 
     {{#with form}}
-    <form>
+    <form class="form">
         <h2 class="form_title">{{title}} </h2>
 
         <div class="form_input_list">
@@ -49,11 +49,18 @@
     </form>
     {{/with}}
 
+    {{#each advantages}}
+    <div class="advantage">
+        <strong>{{title}} </strong>
+        <p>{{text}} </p>
+    </div>
+    {{/each}}
+
 </main>
 
 <div class="advantages">
     {{#each advantages}}
-    <div>
+    <div class="">
         <strong>{{title}} </strong>
         <p>{{text}} </p>
     </div>
