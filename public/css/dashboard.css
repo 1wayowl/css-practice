@@ -313,6 +313,7 @@ body {
     grid-template-columns: 2fr;
     grid-template-rows: auto;
     gap: var(--spacing-5);
+    padding: 15px 0;
   }
 
   .field_block {
@@ -323,11 +324,17 @@ body {
   }
 
   .choise__form {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+
     flex-direction: column;
-    align-items: flex-start;
-    gap: var(--spacing-1);
+  }
+
+  .select__icon {
+    height: 14px;
+    width: fit-content;
+
+    position: relative;
+    background-image: url('/svg/nav/choose.svg');
   }
 }
 
@@ -480,6 +487,7 @@ body {
       grid-template-columns: 2fr;
       grid-template-rows: 2fr;
       gap: var(--spacing-5);
+      padding: 15px 0;
     }
 
     .main__payment {

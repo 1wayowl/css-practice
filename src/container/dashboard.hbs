@@ -176,17 +176,18 @@
                         <hr class="divider--line">
 
                         <form class="choise__form vertical--small">
-                            <div class="text">
+                            <div class="contactChoice">
                                 <input type="radio" id="#" name="payment" value="">
                                 <label for="contactChoice1">Credit card</label>
-
+                            </div>
+                            <div class="contactChoice">
                                 <input type="radio" id="#" name="payment" value="">
                                 <label for="contactChoice1">Debit card</label>
-
+                            </div>
+                            <div class="contactChoice">
                                 <input type="radio" id="#" name="payment" value="">
                                 <label for="contactChoice1">PayPal</label>
                             </div>
-
                         </form>
 
                         <div class="main__form">
@@ -217,7 +218,10 @@
                                 <label class="text vertical">Country</label>
                                 <div class="relative click">
                                     <div class="field field--select">
-                                        <span class="text text--black ">Choose...</span>
+                                        <span class="text text--black icon select__icon "
+                                            style="background-image: url('/svg/nav/choose.svg')">Choose...</span>
+                                        {{!-- <span class='icon select__icon'
+                                            style="background-image: url('/svg/nav/choose.svg')"></span> --}}
                                     </div>
                                     <select class="field__select ">
                                         <option value="dog">Dog</option>
@@ -231,7 +235,9 @@
                                 <label class="text vertical">State</label>
                                 <div class="relative click">
                                     <div class="field field--select">
-                                        <span class="text text--black ">Choose...</span>
+                                        <span class="text text--black icon select__icon "
+                                            style="background-image: url('/svg/nav/choose.svg')">Choose...</span>
+
                                     </div>
                                     <select class="field__select ">
                                         <option value="dog">Dog</option>
